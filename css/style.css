@@ -120,6 +120,49 @@
       transition:border-color .2s,background .2s,color .2s;
     }
     .term-cmd-btn:hover{border-color:rgba(34,211,238,0.5);background:rgba(34,211,238,0.08);color:var(--sky)}
+
+    /* CRT SCREEN EFFECT — scanlines + phosphor glow + flicker + sweep,
+       scoped to .term-screen only (never the titlebar or buttons).
+       .term-screen wraps .term-body 1:1, so this stays visually fixed
+       and never scrolls with the terminal's text content. */
+    .term-screen{position:relative;overflow:hidden}
+    .term-screen::before{
+      content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
+      background:repeating-linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0px,
+        rgba(0,0,0,0) 1px,
+        rgba(0,0,0,0.4) 2px,
+        rgba(0,0,0,0.4) 3px
+      );
+      mix-blend-mode:multiply;
+    }
+    .term-screen::after{
+      content:'';position:absolute;inset:0;z-index:3;pointer-events:none;
+      background:radial-gradient(ellipse at 50% 45%,rgba(61,255,160,0.10) 0%,rgba(6,14,31,0) 62%);
+      box-shadow:inset 0 0 46px 10px rgba(0,0,0,0.6);
+      animation:crtFlicker 5s infinite;
+    }
+    .term-scan-sweep{
+      position:absolute;left:0;right:0;height:52px;z-index:2;pointer-events:none;
+      background:linear-gradient(to bottom,rgba(61,255,160,0.16),rgba(61,255,160,0) 100%);
+      animation:crtSweep 7s linear infinite;
+    }
+    @keyframes crtFlicker{
+      0%,89%,100%{opacity:1}
+      90%{opacity:0.85}
+      91%{opacity:1}
+      94%{opacity:0.9}
+      95%{opacity:1}
+    }
+    @keyframes crtSweep{
+      0%{top:-52px}
+      100%{top:280px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .term-screen::after{animation:none}
+      .term-scan-sweep{display:none}
+    }
     @media(max-width:960px){.hero-inner{grid-template-columns:1fr}.hero-term-wrap{order:-1}.hero-terminal{max-width:100%}.hero-name{font-size:clamp(2.4rem,8vw,3.5rem)}}
 
     /* ── ABOUT ── */
