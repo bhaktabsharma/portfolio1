@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Bhakta Sharma — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0f1923;
+  --ink2:#1e2d3d;
+  --sky:#0ea5e9;
+  --sky2:#38bdf8;
+  --muted:#5a7a94;
+  --muted2:#8aa4b8;
+  --line:#d8e6f0;
+  --bg:#f6fafd;
+  --white:#ffffff;
+  --accent:#0284c7;
+}
+html{font-size:10pt}
+body{
+  font-family:'Outfit',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.55;
+  min-height:100vh;
+  padding:32px 0 48px;
+}
+.page{
+  width:210mm;
+  max-width:100%;
+  margin:0 auto;
+  background:var(--white);
+  box-shadow:0 8px 48px rgba(14,165,233,0.12),0 2px 8px rgba(0,0,0,0.08);
+  border-radius:4px;
+  overflow:hidden;
+}
+
+/* ── HEADER ── */
+.rh{
+  background:var(--ink);
+  padding:36px 48px 32px;
+  position:relative;
+  overflow:hidden;
+}
+.rh::before{
+  content:'';position:absolute;top:-60px;right:-40px;
+  width:260px;height:260px;
+  border-radius:50%;
+  background:rgba(14,165,233,0.08);
+}
+.rh::after{
+  content:'';position:absolute;bottom:-80px;right:80px;
+  width:180px;height:180px;
+  border-radius:50%;
+  background:rgba(14,165,233,0.05);
+}
+.rh-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;position:relative;z-index:1}
+.rh-left h1{
+  font-size:28pt;font-weight:800;
+  color:var(--white);
+  letter-spacing:-1px;line-height:1;
+  margin-bottom:6px;
+}
+.rh-left h1 span{color:var(--sky2)}
+.rh-left .title{
+  font-size:10pt;font-weight:500;
+  color:var(--sky2);
+  letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:14px;
+  font-family:'JetBrains Mono',monospace;
+}
+.rh-tags{display:flex;gap:8px;flex-wrap:wrap}
+.rh-tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:7.5pt;letter-spacing:1px;
+  padding:3px 10px;border-radius:50px;
+  border:1px solid rgba(56,189,248,0.3);
+  color:var(--sky2);
+  background:rgba(14,165,233,0.1);
+}
+.rh-contact{
+  display:flex;flex-direction:column;gap:8px;
+  text-align:right;flex-shrink:0;
+}
+.rci{
+  font-size:8.5pt;color:rgba(255,255,255,0.7);
+  display:flex;align-items:center;gap:7px;justify-content:flex-end;
+  font-family:'JetBrains Mono',monospace;
+}
+.rci a{color:var(--sky2);text-decoration:none}
+.rci .dot{
+  width:16px;height:16px;border-radius:50%;
+  background:rgba(14,165,233,0.2);border:1px solid rgba(56,189,248,0.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:8pt;flex-shrink:0;
+}
+
+/* ── BODY ── */
+.rb{display:grid;grid-template-columns:1fr 220px;gap:0}
+.rb-main{padding:32px 40px 40px;border-right:1px solid var(--line)}
+.rb-side{padding:28px 24px 40px;background:#f8fbfd}
+
+/* ── SECTION ── */
+.rs{margin-bottom:28px}
+.rs:last-child{margin-bottom:0}
+.rs-title{
+  font-family:'JetBrains Mono',monospace;
+  font-size:7.5pt;font-weight:600;letter-spacing:3px;
+  text-transform:uppercase;color:var(--sky);
+  margin-bottom:14px;
+  padding-bottom:7px;
+  border-bottom:2px solid var(--line);
+  display:flex;align-items:center;gap:8px;
+}
+.rs-title::before{
+  content:'';display:inline-block;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--sky);flex-shrink:0;
+}
+
+/* ── EXPERIENCE / PROJECT ITEMS ── */
+.ri{margin-bottom:18px}
+.ri:last-child{margin-bottom:0}
+.ri-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:4px}
+.ri-name{font-size:10.5pt;font-weight:700;color:var(--ink)}
+.ri-meta{font-family:'JetBrains Mono',monospace;font-size:7.5pt;color:var(--sky);white-space:nowrap;padding:2px 8px;background:rgba(14,165,233,0.07);border-radius:50px;border:1px solid rgba(14,165,233,0.15);margin-top:2px;flex-shrink:0}
+.ri-sub{font-size:8.5pt;color:var(--muted);font-weight:500;margin-bottom:7px;font-family:'JetBrains Mono',monospace}
+.ri-list{list-style:none;display:flex;flex-direction:column;gap:4px}
+.ri-list li{
+  font-size:8.8pt;color:var(--ink2);line-height:1.5;
+  padding-left:14px;position:relative;
+}
+.ri-list li::before{content:'▸';position:absolute;left:0;color:var(--sky);font-size:8pt}
+.ri-proof{
+  display:inline-flex;align-items:center;gap:5px;
+  font-family:'JetBrains Mono',monospace;font-size:7.5pt;
+  color:#059669;background:rgba(5,150,105,0.06);
+  border:1px solid rgba(5,150,105,0.18);border-radius:4px;
+  padding:2px 8px;margin-top:6px;
+}
+
+/* ── SIDE SECTIONS ── */
+.ss{margin-bottom:22px}
+.ss:last-child{margin-bottom:0}
+.ss-title{
+  font-family:'JetBrains Mono',monospace;
+  font-size:7.5pt;font-weight:600;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--sky);
+  margin-bottom:12px;padding-bottom:6px;
+  border-bottom:2px solid var(--line);
+  display:flex;align-items:center;gap:7px;
+}
+.ss-title::before{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--sky);flex-shrink:0}
+
+/* Skills */
+.sk-item{margin-bottom:9px}
+.sk-label{font-size:8.5pt;color:var(--ink);font-weight:600;margin-bottom:4px;display:flex;justify-content:space-between}
+.sk-label span{font-family:'JetBrains Mono',monospace;font-size:7.5pt;color:var(--sky);font-weight:400}
+.sk-bar{height:4px;background:var(--line);border-radius:2px;overflow:hidden}
+.sk-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--sky2))}
+
+/* Certs */
+.cert-item{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:6px;padding:9px 10px;margin-bottom:8px;
+  display:flex;gap:8px;align-items:flex-start;
+}
+.cert-item:last-child{margin-bottom:0}
+.cert-ico{font-size:14pt;flex-shrink:0}
+.cert-name{font-size:8.5pt;font-weight:700;color:var(--ink);margin-bottom:2px}
+.cert-iss{font-family:'JetBrains Mono',monospace;font-size:7pt;color:var(--muted)}
+
+/* Tags cloud */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:5px}
+.tc{font-size:7.5pt;padding:2px 8px;border-radius:50px;border:1px solid var(--line);color:var(--muted2);font-weight:500}
+
+/* Education */
+.edu-item{margin-bottom:10px}
+.edu-name{font-size:9pt;font-weight:700;color:var(--ink)}
+.edu-sub{font-size:8pt;color:var(--muted);font-family:'JetBrains Mono',monospace}
+
+/* Summary */
+.summary{
+  font-size:9.2pt;line-height:1.65;color:var(--ink2);
+  background:rgba(14,165,233,0.04);
+  border-left:3px solid var(--sky);
+  padding:12px 14px;border-radius:0 6px 6px 0;
+  margin-bottom:28px;
+}
+
+/* ── PRINT ── */
+@media print{
+  body{padding:0;background:white}
+  .page{box-shadow:none;border-radius:0;width:210mm}
+  .no-print{display:none!important}
+}
+@page{size:A4;margin:0}
+
+/* ── DOWNLOAD BAR ── */
+.dl-bar{
+  width:210mm;max-width:100%;margin:0 auto 20px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 20px;
+  background:var(--white);
+  border-radius:10px;
+  box-shadow:0 2px 12px rgba(14,165,233,0.1);
+}
+.dl-bar span{font-size:9pt;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.dl-btn{
+  background:var(--sky);color:white;border:none;
+  padding:8px 20px;border-radius:50px;
+  font-family:'Outfit',sans-serif;font-weight:700;font-size:9pt;
+  cursor:pointer;transition:opacity .2s;
+}
+.dl-btn:hover{opacity:.85}
+</style>
+</head>
+<body>
+
+<div class="dl-bar no-print">
+  <span>// bhakta-sharma-resume.pdf</span>
+  <button class="dl-btn" onclick="window.print()">⬇ Download PDF</button>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="rh">
+    <div class="rh-inner">
+      <div class="rh-left">
+        <h1>BHAKTA <span>SHARMA</span></h1>
+        <div class="title">Cybersecurity Researcher &amp; Ethical Hacker</div>
+        <div class="rh-tags">
+          <span class="rh-tag">CEH v12 (In Progress)</span>
+          <span class="rh-tag">CHFI (In Progress)</span>
+          <span class="rh-tag">Web App Security</span>
+          <span class="rh-tag">Bug Bounty Hunting</span>
+          <span class="rh-tag">Penetration Testing</span>
+        </div>
+      </div>
+      <div class="rh-contact">
+        <div class="rci"><span class="dot">@</span><a href="mailto:bhaktabsharma@gmail.com">bhaktabsharma@gmail.com</a></div>
+        <div class="rci"><span class="dot">in</span><a href="https://www.linkedin.com/in/bhaktabsharma/">linkedin.com/in/bhaktabsharma</a></div>
+        <div class="rci"><span class="dot">gh</span><a href="https://github.com/bhaktabsharma">github.com/bhaktabsharma</a></div>
+        <div class="rci"><span class="dot">&#127919;</span><a href="https://tryhackme.com/p/bhaktabsharma">tryhackme.com/p/bhaktabsharma</a></div>
+        <div class="rci"><span class="dot">&#127758;</span><span>Siliguri, West Bengal, India</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="rb">
+
+    <!-- MAIN COLUMN -->
+    <div class="rb-main">
+
+      <div class="summary">
+        Cybersecurity researcher and bug bounty hunter specialising in <strong>web application security, reconnaissance, and penetration testing</strong>. Pursuing EC-Council's CEH v12 and CHFI certifications, with hands-on lab experience across SQL injection, XSS, and network/web recon. TryHackMe <strong>Top 1% globally</strong> with 200+ rooms and a 250-day streak. Builds real, working security tools in Python, JavaScript/TypeScript, and Bash — not just theory.
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="rs">
+        <div class="rs-title">Security Projects</div>
+
+        <div class="ri">
+          <div class="ri-top">
+            <span class="ri-name">Bug Bounty Recon Engine (Main Project)</span>
+            <span class="ri-meta">Bash · Active</span>
+          </div>
+          <div class="ri-sub">github.com/bhaktabsharma/Bug-Bounty-Recon-Tool</div>
+          <ul class="ri-list">
+            <li>Self-contained 10-phase Bash reconnaissance pipeline: subdomain enumeration, HTTP probing, port scanning, URL/JS collection, directory fuzzing, parameter discovery, CI/CD exposure scanning, Nuclei vulnerability sweep, and subdomain takeover checks.</li>
+            <li>Resumable checkpoints at every phase; wraps subfinder, httpx, nmap, katana, ffuf, gf, and nuclei into one coherent, interrupt-safe workflow.</li>
+          </ul>
+        </div>
+
+        <div class="ri">
+          <div class="ri-top">
+            <span class="ri-name">Automated Recon &amp; Enumeration Toolkit v2.0</span>
+            <span class="ri-meta">Python · Active</span>
+          </div>
+          <div class="ri-sub">github.com/bhaktabsharma/Automated-Recon-Enumeration-Toolkit</div>
+          <ul class="ri-list">
+            <li>Modular recon framework with 6 active modules: DNS enumeration, multi-threaded port scanning, subdomain brute-force, web fingerprinting (25+ tech signatures), WHOIS/ASN lookup, and banner grabbing with CVE hint matching.</li>
+            <li>Stealth mode with randomised jitter; passive recon via crt.sh and Wayback Machine CDX API; auto-generates dark-theme HTML report after every scan.</li>
+          </ul>
+        </div>
+
+        <div class="ri">
+          <div class="ri-top">
+            <span class="ri-name">SQL Injection Practice Lab</span>
+            <span class="ri-meta">TypeScript · Active</span>
+          </div>
+          <div class="ri-sub">github.com/bhaktabsharma/SQL-INJECTION-LAB</div>
+          <ul class="ri-list">
+            <li>Full-stack SQL injection playground — React + TypeScript + Vite + Tailwind frontend, Node + Express + TypeScript backend, SQLite storage.</li>
+            <li>53 labs spanning classic, blind (boolean + time-based), UNION-based, and second-order injection, each resetting cleanly between attempts.</li>
+          </ul>
+        </div>
+
+        <div class="ri">
+          <div class="ri-top">
+            <span class="ri-name">Faultline — Local Web Hacking Lab</span>
+            <span class="ri-meta">Node.js · Active</span>
+          </div>
+          <div class="ri-sub">github.com/bhaktabsharma/Web-Hacking-Lab-local</div>
+          <ul class="ri-list">
+            <li>36 hands-on web application vulnerability labs across easy/medium/hard difficulty, running entirely on localhost with zero cloud dependency.</li>
+          </ul>
+        </div>
+
+        <div class="ri">
+          <div class="ri-top">
+            <span class="ri-name">ReconQL — Dorking &amp; Recon Search Engine</span>
+            <span class="ri-meta">JavaScript · Active</span>
+          </div>
+          <div class="ri-sub">github.com/bhaktabsharma/Dorking-Recon-Search-Engine</div>
+          <ul class="ri-list">
+            <li>Google-dorking recon search engine for bug bounty hunting — 23 categories, 91 pre-built queries covering subdomains, APIs, parameters, and exposed files. Static site, live on GitHub Pages.</li>
+          </ul>
+        </div>
+
+        <div class="ri">
+          <div class="ri-top">
+            <span class="ri-name">XSS Bugs Lab</span>
+            <span class="ri-meta">React / Vue / Next.js · Active</span>
+          </div>
+          <div class="ri-sub">github.com/bhaktabsharma/XSS-Bugs-Lab</div>
+          <ul class="ri-list">
+            <li>72 XSS practice labs — reflected, stored, and DOM-based — across deliberately vulnerable React, Vue, and Next.js environments with SQLite-backed progress tracking.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- CTF WRITEUPS -->
+      <div class="rs">
+        <div class="rs-title">CTF &amp; Lab Research</div>
+        <div class="ri">
+          <ul class="ri-list">
+            <li><strong>Blue (TryHackMe)</strong> — Exploited MS17-010 (EternalBlue) via Metasploit; post-exploitation hashdump and privilege escalation to SYSTEM.</li>
+            <li><strong>Memory Forensics (TryHackMe)</strong> — Volatility 3 analysis: process injection detection, C2 network IOC extraction, NTLM hash recovery from LSASS.</li>
+            <li><strong>PCAP Analysis (TryHackMe)</strong> — Wireshark/tshark investigation: C2 beacon detection, credential extraction from cleartext protocols, malware traffic fingerprinting.</li>
+            <li><strong>Active Directory Penetration</strong> — Kerberoasting, BloodHound graph analysis, Pass-the-Hash, and DCSync attack chain documentation.</li>
+            <li><strong>OWASP Top 10 / Web App</strong> — SQLi, SSTI, SSRF, XXE, IDOR exploitation with Burp Suite; full annotated exploit scripts per challenge.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDE COLUMN -->
+    <div class="rb-side">
+
+      <!-- CERTIFICATIONS -->
+      <div class="ss">
+        <div class="ss-title">Certifications</div>
+        <div class="cert-item">
+          <span class="cert-ico">🎖️</span>
+          <div>
+            <div class="cert-name">Certified Ethical Hacker</div>
+            <div class="cert-iss">EC-Council · CEH v12 · In Progress</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="cert-ico">🔬</span>
+          <div>
+            <div class="cert-name">Computer Hacking Forensic Investigator</div>
+            <div class="cert-iss">EC-Council · CHFI · In Progress</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="cert-ico">🏅</span>
+          <div>
+            <div class="cert-name">NVH Digital Forensic</div>
+            <div class="cert-iss">NEWVERSIONHACKER · Grade A+</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="cert-ico">🎯</span>
+          <div>
+            <div class="cert-name">Jr Penetration Tester</div>
+            <div class="cert-iss">TryHackMe · Path · Completed</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="cert-ico">🛡️</span>
+          <div>
+            <div class="cert-name">SOC Level 1</div>
+            <div class="cert-iss">TryHackMe · Path · Completed</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRYHACKME -->
+      <div class="ss">
+        <div class="ss-title">TryHackMe</div>
+        <div class="cert-item" style="flex-direction:column;gap:6px">
+          <div style="display:flex;justify-content:space-between;width:100%">
+            <span style="font-size:8.5pt;font-weight:700;color:var(--ink)">Global Ranking</span>
+            <span style="font-family:var(--mono);font-size:8pt;color:var(--sky)">Top 1%</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;width:100%">
+            <span style="font-size:8.5pt;font-weight:700;color:var(--ink)">Rooms Completed</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:8pt;color:var(--sky)">200+</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;width:100%">
+            <span style="font-size:8.5pt;font-weight:700;color:var(--ink)">Longest Streak</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:8pt;color:var(--sky)">250 Days 🔥</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;width:100%">
+            <span style="font-size:8.5pt;font-weight:700;color:var(--ink)">Rank</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:8pt;color:var(--sky)">Hacker</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="ss">
+        <div class="ss-title">Core Skills</div>
+        <div class="sk-item">
+          <div class="sk-label">DFIR <span>90%</span></div>
+          <div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-label">Penetration Testing <span>83%</span></div>
+          <div class="sk-bar"><div class="sk-fill" style="width:83%"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-label">Python Scripting <span>85%</span></div>
+          <div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-label">Malware Analysis <span>75%</span></div>
+          <div class="sk-bar"><div class="sk-fill" style="width:75%"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-label">Network Forensics <span>82%</span></div>
+          <div class="sk-bar"><div class="sk-fill" style="width:82%"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-label">Web App Security <span>80%</span></div>
+          <div class="sk-bar"><div class="sk-fill" style="width:80%"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-label">Bash / Shell <span>78%</span></div>
+          <div class="sk-bar"><div class="sk-fill" style="width:78%"></div></div>
+        </div>
+      </div>
+
+      <!-- TOOLS -->
+      <div class="ss">
+        <div class="ss-title">Tools &amp; Platforms</div>
+        <div class="tag-cloud">
+          <span class="tc">Autopsy</span>
+          <span class="tc">Volatility 3</span>
+          <span class="tc">FTK Imager</span>
+          <span class="tc">Wireshark</span>
+          <span class="tc">Nmap</span>
+          <span class="tc">Metasploit</span>
+          <span class="tc">Burp Suite</span>
+          <span class="tc">Hashcat</span>
+          <span class="tc">Gobuster</span>
+          <span class="tc">Ghidra</span>
+          <span class="tc">Maltego</span>
+          <span class="tc">Splunk</span>
+          <span class="tc">Kali Linux</span>
+          <span class="tc">Aircrack-ng</span>
+          <span class="tc">pefile</span>
+          <span class="tc">YARA</span>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="ss">
+        <div class="ss-title">Education</div>
+        <div class="edu-item">
+          <div class="edu-name">Diploma in Civil Engineering</div>
+          <div class="edu-sub">2021 – 2024</div>
+        </div>
+        <div class="edu-item" style="margin-top:8px">
+          <div class="edu-name">Self-Study: Cybersecurity</div>
+          <div class="edu-sub">TryHackMe · EC-Council · 2023–Present</div>
+        </div>
+      </div>
+
+      <!-- LANGUAGES -->
+      <div class="ss">
+        <div class="ss-title">Languages</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;justify-content:space-between;font-size:8.5pt">
+            <span style="font-weight:600;color:var(--ink)">English</span>
+            <span style="color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:7.5pt">Professional</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:8.5pt">
+            <span style="font-weight:600;color:var(--ink)">Hindi</span>
+            <span style="color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:7.5pt">Native</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:8.5pt">
+            <span style="font-weight:600;color:var(--ink)">Nepali</span>
+            <span style="color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:7.5pt">Native</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
